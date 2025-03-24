@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks Udah Maafin!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2E8B57, #FFD700);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 750px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .console {
+            font-family: 'Fira Code', monospace;
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            color: #00FF00;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .typing {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #FFD700;
+            font-size: 18px;
+            animation: typing 3s steps(30, end), blinkCursor 0.6s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blinkCursor {
+            50% { border-color: transparent; }
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #FFD700;
+            color: black;
+            font-size: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .btn:hover {
+            background: #ffffff;
+            color: #2E8B57;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌙 Thanks Udah Maafin! 🎉</h1>
+        <div class="console">
+            <p><span class="typing"></span></p>
+        </div>
+        <a href="https://sites.google.com/view/eid-mubarak-zahran/halaman-muka" class="btn">Balik ke Beranda</a>
+    </div>
+
+    <script>
+        const messages = [
+            "Initializing forgiveness... ✅", 
+            "Clearing past conflicts... ✅", 
+            "Deploying endless happiness... ✅", 
+            "May your life be bug-free and full of blessings! 🚀"
+        ];
+        let i = 0;
+        function typeMessage() {
+            if (i < messages.length) {
+                document.querySelector('.typing').innerHTML = messages[i];
+                i++;
+                setTimeout(typeMessage, 2500);
+            }
+        }
+        setTimeout(typeMessage, 1000);
+    </script>
+
+</body>
+</html>
